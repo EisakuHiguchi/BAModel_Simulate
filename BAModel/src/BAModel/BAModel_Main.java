@@ -1,0 +1,13 @@
+package BAModel;
+
+public class BAModel_Main {
+
+	public static void main(String[] args) {
+		String path = "C:\\\\work\\\\Data\\\\";
+		NodeManage nm = new NodeManage();
+		WriteWire ww = new WriteWire();
+		ww.write(path, nm.getAllNode());
+		
+		System.out.println("fin");
+	}
+}

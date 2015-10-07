@@ -1,0 +1,14 @@
+package BAModel;
+
+import java.util.ArrayList;
+
+public class WriteWire {
+	public void write(String fn, Node n) {
+		ArrayList<Node> node = n.getNode();
+		
+		for(Node e: node) {
+			
+		}
+		
+	}
+}

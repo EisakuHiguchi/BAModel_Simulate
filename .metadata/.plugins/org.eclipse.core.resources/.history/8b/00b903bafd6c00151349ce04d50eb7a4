@@ -1,0 +1,17 @@
+package BAModel;
+
+import java.util.ArrayList;
+
+public class Node {
+	
+	ArrayList<Node> wired;
+	
+	public Node() {
+		wired = new ArrayList<>();
+		
+	}
+	
+	public void setNode(Node n) { wired.add(n); }
+	public ArrayList<Node> getNode() { return wired; }
+	
+}

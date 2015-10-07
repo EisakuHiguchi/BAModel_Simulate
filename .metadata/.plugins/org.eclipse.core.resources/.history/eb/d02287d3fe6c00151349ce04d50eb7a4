@@ -1,0 +1,9 @@
+package BAModel;
+
+public class NodeManage {
+
+	public void createNode() {
+		
+	}
+	
+}

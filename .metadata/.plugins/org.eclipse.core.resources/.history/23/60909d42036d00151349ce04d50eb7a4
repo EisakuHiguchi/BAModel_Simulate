@@ -1,0 +1,20 @@
+package BAModel;
+
+import java.util.ArrayList;
+
+public class WriteWire {
+	public void write(String fn, Node n) {
+		ArrayList<Node> node = n.getNode();
+		String r = formatPoint(n);
+		
+		for(Node e: node) {
+			r = 
+		}
+		
+	}
+	
+	private String formatPoint(String r, Node n) {
+		double[] p = n.getPoint();
+		return p[0] + " " + p[1] + "\n";
+	}
+}

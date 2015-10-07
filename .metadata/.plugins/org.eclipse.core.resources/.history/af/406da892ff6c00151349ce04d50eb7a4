@@ -1,0 +1,19 @@
+package BAModel;
+
+public class NodeManage {
+
+	double x,y;
+	double line;
+	
+	public NodeManage() {
+		x = 10;
+		y = 10;
+		line = 0;
+	}
+	
+	public void createNode() {
+		
+		Node n = new Node();
+	}
+	
+}

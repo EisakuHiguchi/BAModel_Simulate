@@ -1,0 +1,33 @@
+package BAModel;
+
+public class NodeManage {
+
+	double x,y;
+	double distance;
+	int len;
+	ArrayList<Node> allNode;
+	
+	public NodeManage() {
+		x = 0;
+		y = 10;
+		distance = 10;
+		len = 0;
+	}
+	
+	public void createNode() {
+		if(x < len * distance) {
+			x = x + distance;
+		} else {
+			len++;
+			y = y + distance;
+		}
+		Node n = new Node(x, y);
+	}
+	
+	private void init() {
+		for(int i = 0; i < 4; i++) {
+			createNode();
+		}
+	}
+	
+}
