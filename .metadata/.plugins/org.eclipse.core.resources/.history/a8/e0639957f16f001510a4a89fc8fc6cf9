@@ -26,13 +26,15 @@ public class NodeManage {
 		int allwire = 0;
 		Random r = new Random();
 		Node n = createNode();
-		
 		for(Node e: allNode) allwire += e.getWireNum();
+		
 		for(Node e: allNode) {
-			if(r.nextInt(allwire) > (allwire - e.getWireNum())) {
-				n.setNode(e);
+			if(r.nextInt(allwire) > e.getWireNum()) {
+				
 			}
 		}
+		
+		
 	}
 	
 	

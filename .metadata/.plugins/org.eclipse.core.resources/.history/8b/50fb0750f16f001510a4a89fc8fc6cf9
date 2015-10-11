@@ -25,14 +25,16 @@ public class NodeManage {
 	public void addNewNode() {
 		int allwire = 0;
 		Random r = new Random();
-		Node n = createNode();
 		
 		for(Node e: allNode) allwire += e.getWireNum();
+		
 		for(Node e: allNode) {
-			if(r.nextInt(allwire) > (allwire - e.getWireNum())) {
-				n.setNode(e);
+			if(r.nextInt(allwire) > e.getWireNum()) {
+				
 			}
 		}
+		
+		
 	}
 	
 	
@@ -68,7 +70,6 @@ public class NodeManage {
 	public Node createNode() {
 		Node n = new Node(getNext());
 		allNode.add(n);
-		return n;
 	}
 	
 	private void init() {

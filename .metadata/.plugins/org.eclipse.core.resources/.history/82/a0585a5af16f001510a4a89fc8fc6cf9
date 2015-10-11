@@ -28,11 +28,14 @@ public class NodeManage {
 		Node n = createNode();
 		
 		for(Node e: allNode) allwire += e.getWireNum();
+		
 		for(Node e: allNode) {
-			if(r.nextInt(allwire) > (allwire - e.getWireNum())) {
-				n.setNode(e);
+			if(r.nextInt(allwire) > e.getWireNum()) {
+				
 			}
 		}
+		
+		
 	}
 	
 	

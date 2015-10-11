@@ -33,6 +33,11 @@ public class NodeManage {
 				n.setNode(e);
 			}
 		}
+		
+		for(Node e: n.getNode()) {
+			
+		}
+		
 	}
 	
 	

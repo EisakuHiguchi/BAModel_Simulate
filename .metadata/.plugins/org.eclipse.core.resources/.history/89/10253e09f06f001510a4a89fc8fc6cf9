@@ -1,7 +1,6 @@
 package BAModel;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class NodeManage {
 
@@ -22,17 +21,9 @@ public class NodeManage {
 		init();
 	}
 	
-	public void addNewNode() {
+	public void preferentialSelection() {
 		int allwire = 0;
-		Random r = new Random();
-		Node n = createNode();
-		
 		for(Node e: allNode) allwire += e.getWireNum();
-		for(Node e: allNode) {
-			if(r.nextInt(allwire) > (allwire - e.getWireNum())) {
-				n.setNode(e);
-			}
-		}
 	}
 	
 	
@@ -65,10 +56,8 @@ public class NodeManage {
 		next.add(loc);
 	}
 	
-	public Node createNode() {
-		Node n = new Node(getNext());
-		allNode.add(n);
-		return n;
+	public void createNode() {
+		allNode.add(new Node(getNext()));
 	}
 	
 	private void init() {

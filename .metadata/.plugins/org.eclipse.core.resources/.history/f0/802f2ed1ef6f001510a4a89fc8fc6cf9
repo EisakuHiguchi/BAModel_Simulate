@@ -26,6 +26,5 @@ public class Node {
 	public void setNode(Node n) { wired.add(n); }
 	public double[] getPoint() { return point; }
 	public ArrayList<Node> getNode() { return wired; }
-	public int getWireNum() { return wired.size(); }
 	
 }

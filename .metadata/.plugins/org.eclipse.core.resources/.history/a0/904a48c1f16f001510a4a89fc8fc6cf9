@@ -33,6 +33,7 @@ public class NodeManage {
 				n.setNode(e);
 			}
 		}
+		
 	}
 	
 	
