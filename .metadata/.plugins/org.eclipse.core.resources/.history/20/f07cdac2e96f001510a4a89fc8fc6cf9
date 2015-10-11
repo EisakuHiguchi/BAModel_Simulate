@@ -20,7 +20,7 @@ public class WriteWire {
 		r = formatPoint(n);
 		
 		for(Node e: node) {
-			r = r + formatPoint(e) + formatPoint(n);
+			r = r + formatPoint(e);
 		}
 		
 		try {
