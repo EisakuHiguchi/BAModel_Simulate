@@ -1,0 +1,31 @@
+package BAModel;
+
+import java.util.ArrayList;
+
+public class BAModel_Node {
+	
+	ArrayList<BAModel_Node> wired;
+	double[] point;
+	
+	public BAModel_Node(double x, double y) {
+		init();
+		setPoint(x,y);
+	}
+	
+	public BAModel_Node(double[] xy) {
+		init();
+		setPoint(xy[0], xy[1]);
+	}
+	
+	private void init() {
+		wired = new ArrayList<>();
+		point = new double[2];
+	}
+	
+	public void setPoint(double x, double y) { point[0] = x; point[1] = y; }
+	public void setNode(BAModel_Node n) { wired.add(n); }
+	public double[] getPoint() { return point; }
+	public ArrayList<BAModel_Node> getNode() { return wired; }
+	public int getWireNum() { return wired.size(); }
+	
+}

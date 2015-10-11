@@ -1,0 +1,19 @@
+package DataPlot;
+
+import javax.swing.JFrame;
+
+public class DataPlot extends JFrame {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public DataPlot(){
+		super("DataPlot");
+		this.setSize(800, 800);
+		
+		
+	}
+
+}

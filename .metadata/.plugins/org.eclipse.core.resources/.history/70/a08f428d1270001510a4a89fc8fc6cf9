@@ -1,0 +1,18 @@
+package DataPlot;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class DataPlot extends JPanel {	
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public DataPlot(){
+		JFrame frame = new JFrame("DataPlot");
+		
+	}
+
+}

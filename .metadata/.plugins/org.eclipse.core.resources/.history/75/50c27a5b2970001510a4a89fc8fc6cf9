@@ -1,0 +1,51 @@
+package BAModel;
+
+import java.awt.BorderLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JViewport;
+
+import DataPlot.DataPlot;
+
+public class BAModel_Main extends JFrame {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public static void main(String[] args) {
+		String path = "C:\\\\work\\\\Data\\\\";
+		NodeManage nm = new NodeManage();
+		WriteWire ww = new WriteWire();
+		
+		int loop = 100;
+		for(int i = 0; i < loop; i++) {
+			nm.addNewNode();
+		}
+		ww.write(path, nm.getAllNode());
+		
+		JFrame frame = new JFrame();
+		frame.setTitle("DataPlot");
+		frame.setSize(800, 800);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		DataPlot dp = new DataPlot();
+		dp.drawBANode(nm.getAllNode());
+		
+		dp.setVisible(true);
+		dp.repaint();
+		
+		JScrollPane sp = new JScrollPane();
+		sp.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+		sp.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+		JViewport view = sp.getViewport();
+		view.setView(dp);
+		
+		frame.getContentPane().add(sp, BorderLayout.CENTER);
+		frame.setVisible(true);
+		
+		System.out.println("fin");
+	}
+}

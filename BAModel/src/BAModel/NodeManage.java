@@ -10,25 +10,22 @@ public class NodeManage {
 	int len;
 	int count;
 	ArrayList<double[]> next;
-	ArrayList<Node> allNode;
+	ArrayList<BA_Node> allNode;
 	
-	public NodeManage() {
+	public NodeManage(int distance) {
 		allNode = new ArrayList<>();
-		x = 0;
-		y = 0;
-		distance = 10;
-		len = 0;
-		count = 1;
+		x = 0; y = 0; len = 0; count = 1;
+		this.distance = BAModel_Main.sizeW / (Math.sqrt(distance + 4) + 3);
 		init();
 	}
 	
 	public void addNewNode() {
 		int allwire = 0;
 		Random r = new Random();
-		Node n = createNode();
+		BA_Node n = createNode();
 		
-		for(Node e: allNode) allwire += e.getWireNum();
-		for(Node e: allNode) {
+		for(BA_Node e: allNode) allwire += e.getWireNum();
+		for(BA_Node e: allNode) {
 			if(r.nextInt(allwire) > (allwire - e.getWireNum())) {
 				n.setNode(e);
 			}
@@ -65,8 +62,8 @@ public class NodeManage {
 		next.add(loc);
 	}
 	
-	public Node createNode() {
-		Node n = new Node(getNext());
+	public BA_Node createNode() {
+		BA_Node n = new BA_Node(getNext());
 		allNode.add(n);
 		return n;
 	}
@@ -77,13 +74,13 @@ public class NodeManage {
 		}
 		
 		for(int i = 0; i < allNode.size(); i++) {
-			Node n1 = allNode.get(i);
+			BA_Node n1 = allNode.get(i);
 			for(int j = 0; j < allNode.size(); j++) {
-				Node n2 = allNode.get(j);
+				BA_Node n2 = allNode.get(j);
 				if(i != j) n1.setNode(n2);
 			}
 		}
 	}
-	public ArrayList<Node> getAllNode() { return allNode; }
+	public ArrayList<BA_Node> getAllNode() { return allNode; }
 	
 }

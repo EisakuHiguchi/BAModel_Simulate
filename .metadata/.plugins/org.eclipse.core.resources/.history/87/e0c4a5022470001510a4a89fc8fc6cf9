@@ -1,0 +1,34 @@
+package BAModel;
+
+import javax.swing.JFrame;
+
+import DataPlot.DataPlot;
+
+public class BAModel_Main extends JFrame {
+
+	public static void main(String[] args) {
+		String path = "C:\\\\work\\\\Data\\\\";
+		NodeManage nm = new NodeManage();
+		WriteWire ww = new WriteWire();
+		
+		int loop = 10;
+		for(int i = 0; i < loop; i++) {
+			nm.addNewNode();
+		}
+		ww.write(path, nm.getAllNode());
+		
+		JFrame frame = new JFrame();
+		setTitle("DataPlot");
+		setSize(800, 800);
+		setContentPane(this);
+		setVisible(true);
+		
+		DataPlot dp = new DataPlot();
+		dp.drawBANode(nm.getAllNode().get(0));
+		
+		dp.setVisible(true);
+		dp.repaint();
+		
+		System.out.println("fin");
+	}
+}

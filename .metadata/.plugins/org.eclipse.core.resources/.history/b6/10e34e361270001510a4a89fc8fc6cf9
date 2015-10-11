@@ -1,0 +1,12 @@
+package DataPlot;
+
+import javax.swing.JFrame;
+
+public class DataPlot extends JFrame {
+	
+	public DataPlot(){
+		super("DataPlot");
+		this.setSize(300, 600);
+	}
+
+}

@@ -5,7 +5,7 @@ import java.io.*;
 
 public class WriteWire {
 	
-	public void write(String path, ArrayList<Node> allnode) {
+	public void write(String path, ArrayList<BA_Node> allnode) {
 		
 		for(int i = 0; i< allnode.size(); i++) {
 			write(path + "data" + i + ".txt", allnode.get(i));
@@ -14,12 +14,12 @@ public class WriteWire {
 		createScript(path, allnode.size());
 	}
 	
-	public void write(String fn, Node n) {
-		ArrayList<Node> node = n.getNode();
+	public void write(String fn, BA_Node n) {
+		ArrayList<BA_Node> node = n.getNode();
 		String r = "";
 		r = formatPoint(n);
 		
-		for(Node e: node) {
+		for(BA_Node e: node) {
 			r = r + formatPoint(e) + formatPoint(n);
 		}
 		
@@ -33,7 +33,7 @@ public class WriteWire {
 		
 	}
 	
-	private String formatPoint(Node n) {
+	private String formatPoint(BA_Node n) {
 		double[] p = n.getPoint();
 		return p[0] + " " + p[1] + "\n";
 	}
