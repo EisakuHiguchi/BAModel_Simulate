@@ -14,7 +14,7 @@ public class BAModel_Main extends JFrame {
 	public static int sizeH = 800;
 	
 	public static void main(String[] args) {
-//		String path = "C:\\\\work\\\\Data\\\\";
+		String path = "C:\\\\work\\\\Data\\\\";
 		int loop = 2000;
 		
 		NodeManage nm = new NodeManage(loop);
