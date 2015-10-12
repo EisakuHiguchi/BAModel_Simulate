@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/BAModel/src/BAModel/BAModel_Main.java"/>
+<listEntry value="/BAModel/src/DataPlot/BAModel_Main.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
-<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="BAModel.BAModel_Main"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="DataPlot.BAModel_Main"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="BAModel"/>
 </launchConfiguration>

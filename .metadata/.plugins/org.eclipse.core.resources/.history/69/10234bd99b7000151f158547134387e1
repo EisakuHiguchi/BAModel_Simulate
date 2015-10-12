@@ -1,0 +1,28 @@
+package FitnessModel;
+
+import java.util.ArrayList;
+
+import BAModel.NodeManage;
+
+public class FitnessModelManage extends NodeManage {
+
+	public FitnessModelManage(int distance) {
+		super(distance);
+	}
+	
+	@Override
+	protected void nextNodeLocations() {
+		next = new ArrayList<>();
+		count = 0;
+		x += distance;
+		y += distance;
+		
+		setNextLocation(x, y);
+		for(int i = 1; i <= len; i++) {
+			setNextLocation(x, y - i*distance);
+			setNextLocation(x - i*distance, y);
+		}
+		len++;
+	}
+
+}

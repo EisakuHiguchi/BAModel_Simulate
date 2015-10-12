@@ -1,0 +1,11 @@
+package FitnessModel;
+
+import BAModel.BA_Node;
+
+public class Fitness_Node extends BA_Node {
+
+	public Fitness_Node(double[] xy) {
+		super(xy);
+	}
+
+}

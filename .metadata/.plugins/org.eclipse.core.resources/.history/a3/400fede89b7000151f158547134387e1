@@ -1,0 +1,15 @@
+package FitnessModel;
+
+import java.util.ArrayList;
+
+import BAModel.NodeManage;
+
+public class FitnessModelManage extends NodeManage {
+
+	public FitnessModelManage(int distance) {
+		super(distance);
+	}
+	
+	@Override
+	
+}

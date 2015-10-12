@@ -1,0 +1,28 @@
+package FitnessModel;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+import BAModel.BA_Node;
+import BAModel.NodeManage;
+
+public class FitnessModelManage extends NodeManage {
+
+	public FitnessModelManage(int distance) {
+		super(distance);
+	}
+	
+	@Override
+	public void addNewNode() {
+		int allwire = 0;
+		Random r = new Random();
+		BA_Node n = createNode();
+		
+		for(BA_Node e: allNode) allwire += e.getWireNum();
+		for(BA_Node e: allNode) {
+			if(r.nextInt(allwire) > (allwire - e.getWireNum())) {
+				n.setNode(e);
+			}
+		}
+	}
+}

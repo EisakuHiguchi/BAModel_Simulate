@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class BA_Node {
 	
-	ArrayList<BA_Node> wired;
-	double[] point;
+	protected ArrayList<BA_Node> wired;
+	protected double[] point;
 	
 	public BA_Node(double x, double y) {
 		init();

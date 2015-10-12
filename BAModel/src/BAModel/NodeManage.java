@@ -3,14 +3,14 @@ package BAModel;
 import java.util.ArrayList;
 import java.util.Random;
 
+import DataPlot.BAModel_Main;
+
 public class NodeManage {
 
-	double x,y;
-	double distance;
-	int len;
-	int count;
-	ArrayList<double[]> next;
-	ArrayList<BA_Node> allNode;
+	protected double x,y, distance;
+	protected int len, count;
+	protected ArrayList<double[]> next;
+	protected ArrayList<BA_Node> allNode;
 	
 	public NodeManage(int distance) {
 		allNode = new ArrayList<>();
@@ -33,7 +33,7 @@ public class NodeManage {
 	}
 	
 	
-	private void nextNodeLocations() {
+	protected void nextNodeLocations() {
 		next = new ArrayList<>();
 		count = 0;
 		x += distance;
@@ -47,7 +47,7 @@ public class NodeManage {
 		len++;
 	}
 	
-	private double[] getNext() {
+	protected double[] getNext() {
 		if(count >= len*2-1) {
 			nextNodeLocations();
 		}
@@ -55,7 +55,7 @@ public class NodeManage {
 		return next.get(count - 1);
 	}
 	
-	private void setNextLocation(double x, double y) {
+	protected void setNextLocation(double x, double y) {
 		double[] loc = new double[2];
 		loc[0] = x;
 		loc[1] = y;

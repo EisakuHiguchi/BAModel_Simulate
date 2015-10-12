@@ -1,6 +1,0 @@
-package DataPlot;
-
-public class DataPlot extends JFrame {
-	
-
-}

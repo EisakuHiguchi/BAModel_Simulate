@@ -1,0 +1,13 @@
+package FitnessModel;
+
+import BAModel.NodeManage;
+
+public class FitnessModelManage extends NodeManage {
+
+	public FitnessModelManage(int distance) {
+		super(distance);
+	}
+	
+	
+
+}

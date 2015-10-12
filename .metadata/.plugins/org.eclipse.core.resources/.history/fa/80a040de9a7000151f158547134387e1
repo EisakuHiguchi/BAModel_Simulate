@@ -1,0 +1,5 @@
+package FitnessModel;
+
+public class FitnessModelManage extends NodeManage {
+
+}
